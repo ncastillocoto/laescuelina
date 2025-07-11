@@ -109,8 +109,9 @@ nav a:hover {
 }
 
 .logo2 {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   margin: 0 auto 2rem;
   background: white;
   border-radius: 5%;
@@ -519,22 +520,19 @@ footer {
 
 @media (max-width: 768px) {
   .nav-menu {
-    display: none;
     flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: rgba(74, 94, 58, 0.95);
+    align-items: flex-start;
     padding: 1rem;
+    background-color: var(--verde-claro);
   }
 
-  .nav-menu.active {
-    display: flex;
+  .nav-menu li {
+    margin: 0.5rem 0;
   }
 
-  .hamburger {
+  .nav-menu li a {
     display: block;
+    width: 100%;
   }
 }
 
@@ -569,4 +567,30 @@ footer {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+@media (max-width: 1024px) {
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .logo2 {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
 }
