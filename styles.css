@@ -406,17 +406,19 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .nav-menu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    width: 100%;
     background-color: var(--verde-claro);
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    z-index: 999;
   }
 
   .nav-menu.active {
