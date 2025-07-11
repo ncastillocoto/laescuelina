@@ -524,7 +524,7 @@ footer {
 
 .nav-menu {
   list-style: none;
-  display: flex;
+  display: none;
   gap: 2rem;
 }
 
