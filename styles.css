@@ -404,61 +404,6 @@ footer {
   transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-
-  .hamburger {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-    z-index: 1100;
-  }
-
-  .nav-menu {
-    display: none; /* <== IMPORTANTE: completamente oculto */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--verde-claro);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    z-index: 1000;
-  }
-
-  .nav-menu.active {
-    display: flex; /* Solo se muestra cuando tiene la clase .active */
-  }
-
-  .nav-menu li {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  .nav-menu li a {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    color: white;
-    border-radius: 10px;
-  }
-
-  .nav-menu li a:hover {
-    background-color: var(--amarillo);
-    color: var(--verde-oscuro);
-  }
-}
-
 .floating-buttons {
   position: fixed;
   bottom: 20px;
@@ -524,7 +469,6 @@ footer {
 
 .nav-menu {
   list-style: none;
-  display: none;
   gap: 2rem;
 }
 
@@ -607,5 +551,60 @@ footer {
 
   .section {
     padding: 3rem 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .nav-menu {
+    display: none; /* <== IMPORTANTE: completamente oculto */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--verde-claro);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex; /* Solo se muestra cuando tiene la clase .active */
+  }
+
+  .nav-menu li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .nav-menu li a:hover {
+    background-color: var(--amarillo);
+    color: var(--verde-oscuro);
   }
 }
