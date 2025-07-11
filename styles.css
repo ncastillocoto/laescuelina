@@ -407,26 +407,48 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
   }
 
   .nav-menu {
     display: none;
     flex-direction: column;
-    width: 100%;
-    background-color: var(--verde-claro);
+    align-items: flex-start;
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
+    background-color: var(--verde-claro);
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
 
   .nav-menu.active {
     display: flex;
   }
 
-  .hamburger {
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-menu li a {
     display: block;
+    width: 100%;
+    padding: 1rem 0;
   }
 }
 
